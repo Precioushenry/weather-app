@@ -1,4 +1,4 @@
-// script.js
+
 
 const API_KEY = '473fc7988b0cf50b1e648bbefd3fd349'; // Replace with your OpenWeatherMap API key
 
@@ -34,7 +34,7 @@ function updateWeatherInfo(data) {
   const date = new Date(data.dt * 1000);
   dateElement.textContent = date.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
 
-  // Round off temperature to one decimal point
+ 
   temperatureElement.textContent = data.main.temp.toFixed(0) + '°C';
 
   summaryElement.textContent = data.weather[0].description;
@@ -56,6 +56,6 @@ async function handleSearch() {
   }
 }
 
-// Event listener for the search button
+
 const searchButton = document.querySelector('.btn');
 searchButton.addEventListener('click', handleSearch);
